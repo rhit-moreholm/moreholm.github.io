@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Raleway:wght@300&display=swap');
+
+:root {
+  --vertical-space: 2rem;
+  --horizontal-space: 2rem;
+  --light-color: #f2f6f7;
+  --body-color: #2D2D1d;
+  --heading-color: #ded1e0;
+  --contrast-color: #587b54;
+   /* #536751; */
+  /* #8c708f; */
+  /* --green-color: #738f70; */
+}
+
+body {
+  grid-template-areas: "head head"
+                      "nav nav"
+                      "main main"
+                      "foot foot";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+}
+
+
+body > header {
+  grid-area: head;
+}
+
+body > nav {
+  grid-area: nav;
+}
+
+body > nav ul li {
+  display: inline;
+  padding: 1rem;
+  justify-self: center;
+  color: var(--contrast-color);
+}
+
+footer {
+  grid-area: foot;
+}
+
+main {
+  display: block;
+  grid-area: main;
+  max-width: 50rem;
+  padding-left: var(--horizontal-space);
+  padding-right: var(--horizontal-space);
+  justify-self: center;
+}
+
+header h1, footer p{
+  margin: 0;
+  justify-self: center;
+  justify-content: center;
+}
+
+header, footer {
+  padding-top: var(--vertical-space);
+  padding-bottom: var(--vertical-space);
+  padding-left: var(--horizontal-space);
+  padding-right: var(--horizontal-space);
+  grid-area: foot;
+  justify-self: center;
+  justify-content: center;
+  background-color: var(--heading-color);
+  width: 100vw;
+}
+
+body {
+  color: var(--body-color);
+  background: var(--light-color);
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (min-width: 25em) {
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "head head"
+                          "nav main"
+                          "foot foot";
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: auto auto;
+  }
+
+  body > nav {
+    grid-area: nav;
+  }
+
+  body > nav ul li {
+    padding: 1rem;
+    display: list-item;
+  }
+}
+
+p,
+ol,
+ul,
+dl,
+table {
+  list-style-type: none;
+  color: var(--body-color);
+}
+
+ul li ul {
+  margin-bottom: 0;
+  /* font-size: 1.3rem; */
+  list-style-type: none;
+  color: var(--body-color);
+}
+
+#resume > ul, li, ul {
+  margin-bottom: 1rem;
+  /* font-size: 1.3rem; */
+  list-style-type: circle;
+  color: var(--body-color);
+}
+
+ol li ol {
+  margin-bottom: 0;
+  list-style-type: none;
+  color: var(--contrast-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.1rem 0;
+  font-weight: 600;
+  line-height: 1;
+  font-family: 'Frank Ruhl Libre', serif;
+  color: var(--body-color);
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0.8rem 0;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 1em 0;
+}
+
+a {
+  color: var(--body-color);
+  text-decoration-color: var(--contrast-color);
+}
+
+a:hover {
+  color: var(--contrast-color);
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+body#portfolio ul#portfolioItems {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+}
+
+body#portfolio ul#portfolioItems li img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 25em) {
+  body#portfolio ul#portfolioItems li {
+    flex-basis: 48%;
+    padding-right: 2%;
+    flex-wrap: nowrap;
+  }
+}
+
+main img{
+  max-width: 50%;
+}
+
+.date {
+  color: var(--contrast-color);
+  justify-self: right;
+}
