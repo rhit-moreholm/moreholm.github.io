@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap" rel="stylesheet');
 
 :root {
-  --vertical-space: 2rem;
+  --vertical-space: 1.3rem;
   --horizontal-space: 2rem;
-  --light-color: #f2f6f7;
-  --body-color: #2D2D1d;
-  --heading-color: #ded1e0;
-  --contrast-color: #587b54;
+  --light-color: #FAFBFC;
+  --body-color: #3D3C37;
+  --heading-color: #B4C7D4;
+  --contrast-color: #a16766;
    /* #536751; */
   /* #8c708f; */
   /* --green-color: #738f70; */
@@ -44,7 +44,7 @@ footer {
 main {
   display: block;
   grid-area: main;
-  max-width: 50rem;
+  max-width: 45rem;
   padding-left: var(--horizontal-space);
   padding-right: var(--horizontal-space);
   justify-self: center;
@@ -79,10 +79,10 @@ body {
   body {
     margin: 0;
     display: grid;
-    grid-template-areas: "head head"
-                          "nav main"
-                          "foot foot";
-    grid-template-columns: 1fr 9fr;
+    grid-template-areas: "head head head"
+                          "nav main space"
+                          "foot foot foot";
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: auto auto;
   }
 
@@ -113,7 +113,7 @@ ul li ul {
 }
 
 #resume > ul, li, ul {
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   /* font-size: 1.3rem; */
   list-style-type: circle;
   color: var(--body-color);
@@ -130,10 +130,10 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 1.1rem 0;
+  margin: 0.8rem 0;
   font-weight: 600;
   line-height: 1;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   color: var(--body-color);
 }
 
@@ -143,12 +143,15 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin: 0.8rem 0;
+  margin: 1.7rem 0;
   line-height: 1;
+  text-decoration: underline;
+  text-decoration-color: var(--contrast-color);
 }
 
 h3 {
   font-size: 1.25rem;
+  margin-top: 2rem;
 }
 
 h4 {
@@ -161,6 +164,7 @@ h5 {
 
 p {
   font-size: 1.3rem;
+  font-weight: 500;
   line-height: 1.2;
   margin: 1em 0;
 }
@@ -208,5 +212,12 @@ main img{
 
 .date {
   color: var(--contrast-color);
-  justify-self: right;
+  /* justify-self: flex-end; */
+  /* align-self: flex-end; */
+  font-weight: 0.8rem;
+}
+
+.dateParent {
+  display: flex;
+  justify-content: space-between;
 }
