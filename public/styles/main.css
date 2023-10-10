@@ -2,7 +2,7 @@
 
 :root {
   --vertical-space: 1.3rem;
-  --horizontal-space: 2rem;
+  --horizontal-space: 3rem;
   --light-color: #FAFBFC;
   --body-color: #3D3C37;
   --heading-color: #d0dce4;
@@ -195,7 +195,7 @@ body#portfolio ul#portfolioItems {
 }
 
 body#portfolio ul#portfolioItems li img {
-  max-width: 100%;
+  max-width: 97%;
 }
 
 @media screen and (min-width: 25em) {
